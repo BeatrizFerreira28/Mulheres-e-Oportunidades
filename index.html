@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulheres e Oportunidades</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        /* Estilos do menu de navegação */
+        .navbar {
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-brand img {
+            max-height: 130px;
+            margin-right: 150px;
+        }
+
+        .navbar-brand:hover img {
+            max-height: 240px;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar-nav li {
+            margin: 0 10px;
+        }
+
+        .navbar-nav li a {
+            display: flex;
+            align-items: center;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .navbar-nav li a i {
+            margin-right: 5px;
+            font-size: 20px;
+            color: #5d35a1;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav li a:hover {
+            background-color: #8056c7;
+            color: #fff;
+        }
+
+        .navbar-nav li a:hover i {
+            color: #fff;
+        }
+
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #8056c7;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .arrow {
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        .banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            background-color: #5f84a2;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            /* Espaçamento entre o menu e o banner */
+        }
+
+        .text {
+            max-width: 400px;
+        }
+
+        .text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #3E3E3E;
+        }
+
+        .text p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .image {
+            position: relative;
+            width: 300px;
+        }
+
+        .image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: #8A2BE2;
+            /* Cor roxa */
+            width: 60px;
+            height: 60px;
+            top: -20px;
+            left: -20px;
+        }
+
+        .circle.secondary {
+            background: #5D8AA8;
+            /* Manter cor anterior para o círculo secundário */
+            width: 40px;
+            height: 40px;
+            bottom: -20px;
+            right: -20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #db91a0;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #333;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            border-top: 1px solid #dddddd;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">
+                <img src="logo_site.png" alt="Logo do site">
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="cadastro.html"><i class="fas fa-user"></i> Login</a></li>
+                <div class="dropdown">
+                    <a href="#">Candidatas <span class="arrow">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="educacao.html">Conhecimento é Poder (e um Pouco de Glamour)</a>
+                        <a href="empregos.html">Onde Seu Talento Brilha!</a>
+                        <a href="estagio.html">Estágio: O Primeiro Passo</a>
+                        <a href="comunidade.html">Juntas Somos Mais Fortes</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Empresas <span class="arrow">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="perfis.html">O Melhor do Talento Feminino</a>
+                        <a href="gerenciar_vagas.html">Área VIP da Empresa</a>
+                    </div>
+                </div>
+                <li><a href="sobre_nos.html"><i class="fas fa-info-circle"></i> Sobre Nós</a></li>
+                <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <div class="text">
+            <h1>Mulheres e Oportunidades</h1>
+            <p>Oportunidades que impulsionam mulheres a liderar e conquistar.</p>
+        </div>
+        <div class="image">
+            <div class="circle"></div>
+            <div class="circle secondary"></div>
+            <img src="banner_site.jpg" alt="Bowl of Ramen">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Combate à Discriminação de gênero</h2>
+            <p>Mulheres continuam a enfrentar desigualdade de gênero em muitos setores, incluindo disparidades salariais
+                e oportunidades de crescimento limitadas. Ao criar um site focado em mulheres, podemos ajudar a aumentar
+                a visibilidade das vagas que promovem a igualdade de gênero.</p>
+        </div>
+        <div class="card">
+            <h2>Por que um site exclusivo para mulheres?</h2>
+            <p>Em um mercado de trabalho cada vez mais competitivo, é crucial criar espaços que promovam igualdade e
+                ofereçam suporte específico para diferentes grupos. Um site de empregos voltado exclusivamente para as
+                mulheres cumpre uma função importante ao reconhecer e atender às necessidades únicas enfrentadas por
+                elas no ambiente corporativo.</p>
+        </div>
+        <div class="card">
+            <h2>Criação de uma Comunidade de Suporte</h2>
+            <p>A construção de uma comunidade onde as mulheres possam compartilhar experiências, oferecer apoio mútuo e
+                celebrar suas conquistas é essencial. Esse tipo de plataforma facilita as conexões entre mulheres em
+                diferentes fases de suas carreiras.</p>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Mulheres e Oportunidades. Todos os direitos reservados.<br>
+        CNPJ: 35.555.690/0002-58 – CEP: 402906-95
+        <div class="social-icons">
+            <a href="mailto:exemplo@negobom.com"><img src="email_icon.jpg" alt="E-mail"></a>
+            <a href="https://facebook.com"><img src="facebook_icon.jpg" alt="Facebook"></a>
+            <a href="https://instagram.com"><img src="instagram_icon.jpg" alt="Instagram"></a>
+            <a href="https://wa.me/5511999999999"><img src="whatsApp_icon.jpg" alt="WhatsApp"></a>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.navbar-brand').addEventListener('mouseenter', function () {
+            this.style.transform = 'scale(1.1)';
+        });
+
+        document.querySelector('.navbar-brand').addEventListener('mouseleave', function () {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+</body>
+
+</html>
